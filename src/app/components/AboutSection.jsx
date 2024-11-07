@@ -7,7 +7,7 @@ const TAB_DATA = [
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2">
+      <ul className="list-disc pl-4">
         <li>Technical High School Graduate in Systems - INAC</li>
         <li>Labor technician in programming competencies - Campuslands</li>
       </ul>
@@ -17,7 +17,7 @@ const TAB_DATA = [
   //   title: "Certifications",
   //   id: "certifications",
   //   content: (
-  //     <ul className="list-disc pl-2">
+  //     <ul className="list-disc pl-4">
   //       <li>AWS Cloud Practitioner</li>
   //       <li>Google Professional Cloud Developer</li>
   //     </ul>
@@ -36,14 +36,17 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-3 gap-8 items-center py-10 px-4 xl:gap-19 sm:py-19 xl:px-16">
-        
+    <section className="text-white py-10 px-4 xl:px-16" id="about">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center px-0 sm:px-0.5 md:px-1 lg:px-2 xl:px-4">
+
+
+
+
         <div className="rounded-md mt-4 md:mt-0 flex flex-col h-full p-10 shadow-lg shadow-violet-500">
           <h2 className="text-4xl font-bold text-white mb-4 text-center">Vision</h2>
           <p className="text-base lg:text-lg">
             To be recognized as a leading software developer in creating innovative,
-            high-impact technological solutions, driving the digital transformation 
+            high-impact technological solutions, driving the digital transformation
             of companies globally. I aspire to establish long-lasting relationships
             with my clients, consistently providing added value through technical excellence,
             continuous improvement, and a focus on adapting to the latest technological trends.
@@ -65,7 +68,7 @@ const AboutSection = () => {
             looking to expand my knowledge and skill set. I am a team player and
             I am excited to work with others to create amazing applications.
           </p>
-          <div className="flex flex-row justify-start mt-8"> 
+          <div className="flex flex-wrap justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
@@ -83,7 +86,7 @@ const AboutSection = () => {
             {TAB_DATA.find((t) => t.id === tab)?.content}
           </div>
         </div>
-        
+
       </div>
     </section>
   );

@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const LanguageCarousel = () => {
-  // Use state to track if we're on the client side
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -30,27 +29,37 @@ const LanguageCarousel = () => {
   const doubledLanguages = [...languages, ...languages];
 
   return (
-    <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-      <h2 className="text-4xl font-bold text-white mb-4 text-center">My Skills</h2>
-      <div className="rounded-md py-8 px-16">
+    <div className="w-full py-4 px-2 sm:py-8 sm:px-4">
+      <h2 className="text-2xl sm:text-4xl font-bold text-white mb-4 text-center">
+        My Skills
+      </h2>
+      <div className="rounded-md py-4 px-4 sm:py-8 sm:px-16">
         <div className="relative overflow-hidden w-full">
-          {/* Only apply animation class on client side */}
-          <div className={`flex flex-row items-center justify-start gap-16 ${isClient ? 'animate-scroll' : ''}`}>
+          <div
+            className={`flex flex-row items-center justify-start gap-8 sm:gap-16 ${
+              isClient
+                ? "animate-[scroll_10s_linear_infinite] hover:[animation-play-state:paused]"
+                : ""
+            }`}
+          >
             {doubledLanguages.map((language, index) => (
               <div
                 key={`${language.name}-${index}`}
-                className="flex flex-col items-center justify-center flex-shrink-0 transition-transform duration-300 hover:scale-110"
+                className="flex flex-col items-center justify-center flex-shrink-0 group"
               >
-                <div className="w-16 h-16 mb-4">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 mb-2 sm:mb-4 relative transition-transform duration-300 group-hover:scale-110">
                   <Image
                     src={language.icon}
                     alt={`${language.name} logo`}
                     width={64}
                     height={64}
-                    className="object-contain"
+                    className="object-contain w-full h-full"
+                    priority={index < 4} // Prioritize loading first few images
                   />
                 </div>
-                <p className="text-[#ADB7BE] text-base whitespace-nowrap">{language.name}</p>
+                <p className="text-[#ADB7BE] text-sm sm:text-base whitespace-nowrap">
+                  {language.name}
+                </p>
               </div>
             ))}
           </div>
