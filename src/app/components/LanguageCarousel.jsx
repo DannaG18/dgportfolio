@@ -24,6 +24,10 @@ const LanguageCarousel = () => {
     { name: "BootStrap", icon: "/images/skills/icons8-bootstrap-logo-96.png" },
     { name: "HTML", icon: "/images/skills/icons8-html-logo-96.png" },
     { name: "CSS", icon: "/images/skills/icons8-css-logo-96.png" },
+    { name: "Azure", icon: "/images/skills/Microsoft_Azure_Logo.svg.png" },
+    { name: "Azure AI", icon: "/images/skills/Azure-ai-logo.png" },
+    { name: "Power BI", icon: "/images/skills/Microsoft-Power-BI-Logo.png" },
+    { name: "Scrum", icon: "/images/skills/scrum.png" },
   ];
 
   const doubledLanguages = [...languages, ...languages];
@@ -35,13 +39,7 @@ const LanguageCarousel = () => {
       </h2>
       <div className="rounded-md py-4 px-4 sm:py-8 sm:px-16">
         <div className="relative overflow-hidden w-full">
-          <div
-            className={`flex flex-row items-center justify-start gap-8 sm:gap-16 ${
-              isClient
-                ? "animate-[scroll_10s_linear_infinite] hover:[animation-play-state:paused]"
-                : ""
-            }`}
-          >
+          <div className="flex w-max animate-scroll gap-12 sm:gap-16 hover:[animation-play-state:paused]">
             {doubledLanguages.map((language, index) => (
               <div
                 key={`${language.name}-${index}`}
@@ -54,7 +52,7 @@ const LanguageCarousel = () => {
                     width={64}
                     height={64}
                     className="object-contain w-full h-full"
-                    priority={index < 4} // Prioritize loading first few images
+                    priority={index < 4}
                   />
                 </div>
                 <p className="text-[#ADB7BE] text-sm sm:text-base whitespace-nowrap">
@@ -66,7 +64,7 @@ const LanguageCarousel = () => {
         </div>
       </div>
     </div>
-  );
+  );  
 };
 
 export default LanguageCarousel;

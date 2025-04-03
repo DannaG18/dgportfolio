@@ -16,7 +16,7 @@ const HeroSection = () => {
           className="col-span-1 sm:col-span-7 text-center sm:text-left justify-self-start"
         >
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-200">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-700">
               Hello, I&apos;m{" "}
             </span>
             <br />
@@ -42,15 +42,15 @@ const HeroSection = () => {
           <div>
             <Link
               href="/#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-200 hover:bg-slate-200 text-white"
+              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-purple-500 to-blue-700 hover:bg-slate-200 text-white"
             >
               Hire Me
             </Link>
             <Link
               href="
               
-              /Danna Alvarez - CVI.pdf"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-200 hover:bg-slate-300 text-white mt-3"
+              /CV Danna Alvarez - ATS.pdf"
+              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-purple-500 to-blue-700 hover:bg-slate-300 text-white mt-3"
               target="_blank"
               download
             >
@@ -69,10 +69,10 @@ const HeroSection = () => {
         >
           <div className="sm:border-[#33353F] sm:border bg-[#181818] w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] relative">
             <Image
-              src="/images/skills/profile.png"
+              src="/images/skills/me.jpg"
               alt="profile photo"
               className="border-2 absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
+              width={350}
               height={300}
             />
           </div>

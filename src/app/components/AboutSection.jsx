@@ -8,21 +8,25 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-4">
-        <li>Technical High School Graduate in Systems - INAC</li>
-        <li>Labor technician in programming competencies - Campuslands</li>
+        <li>Technical Labor Diploma in Software Programming - Campuslands</li>
+        <li>Systems Technician - National Learning Service (SENA) </li>
       </ul>
     ),
   },
-  // {
-  //   title: "Certifications",
-  //   id: "certifications",
-  //   content: (
-  //     <ul className="list-disc pl-4">
-  //       <li>AWS Cloud Practitioner</li>
-  //       <li>Google Professional Cloud Developer</li>
-  //     </ul>
-  //   ),
-  // },
+  {
+    title: "Certifications",
+    id: "certifications",
+    content: (
+      <ul className="list-disc pl-4">
+        <li><b>IBM: </b>Artificial Intelligence Fundamentals</li>
+        <p className="">Issued 19 - March 2025</p>
+        <li><b>Microsoft Certified:</b> Security, Compliance, and Identity Fundamentals</li>
+        <p className="">Issued 13 - March 2025</p>
+        <li><b>EF SET: </b> English Certified (C1 Advanced)</li>
+        <p className="">Issued 7 - February 2025</p>
+      </ul>
+    ),
+  },
 ];
 
 const AboutSection = () => {
@@ -36,16 +40,13 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white py-10 px-4 xl:px-16" id="about">
-<div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center px-0 sm:px-0.5 md:px-1 lg:px-2 xl:px-4">
+    <section className="text-white py-10 px-4 xl:px-17" id="about">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center px-0 sm:px-0.5 md:px-1 lg:px-2 xl:px-4">
 
-
-
-
-        <div className="rounded-md mt-4 md:mt-0 flex flex-col h-full p-10 shadow-lg shadow-violet-500">
+        <div className="rounded-md mt-4 md:mt-0 flex flex-col h-full p-10 shadow-lg shadow-blue-500">
           <h2 className="text-4xl font-bold text-white mb-4 text-center">Vision</h2>
           <p className="text-base lg:text-lg">
-            To be recognized as a leading software developer in creating innovative,
+            Be recognized as a leading software developer in creating innovative,
             high-impact technological solutions, driving the digital transformation
             of companies globally. I aspire to establish long-lasting relationships
             with my clients, consistently providing added value through technical excellence,
@@ -53,10 +54,10 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="rounded-md mt-4 md:mt-0 flex flex-col h-full p-10 shadow-lg shadow-violet-500">
+        <div className="rounded-md mt-4 md:mt-0 flex flex-col h-full p-10 shadow-lg shadow-blue-500">
           <h2 className="text-4xl font-bold text-white mb-4 text-center">Mission</h2>
           <p className="text-base lg:text-lg">
-            To create innovative, customized technological solutions that optimize business processes, leveraging advanced technologies and best architectural practices. I cater to companies and startups seeking digital transformation, offering remote services on a global scale. My focus on technical excellence, adaptability to new technologies, and alignment with business objectives ensures scalable, high-value solutions based on principles of integrity, discipline, and continuous improvement.
+            Create innovative, customized technological solutions that optimize business processes, leveraging advanced technologies and best architectural practices. I cater to companies and startups seeking digital transformation, offering remote services on a global scale. My focus on technical excellence, adaptability to new technologies, and alignment with business objectives ensures scalable, high-value solutions based on principles of integrity, discipline, and continuous improvement.
           </p>
         </div>
 
@@ -75,12 +76,12 @@ const AboutSection = () => {
             >
               Education
             </TabButton>
-            {/* <TabButton
+            <TabButton
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
             >
               Certifications
-            </TabButton> */}
+            </TabButton>
           </div>
           <div className="mt-8">
             {TAB_DATA.find((t) => t.id === tab)?.content}
