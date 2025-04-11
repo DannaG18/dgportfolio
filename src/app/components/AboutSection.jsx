@@ -18,6 +18,8 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-4">
+        <li><b>Microsoft Certified: </b>Azure AI Fundamentals</li>
+        <p className="">Issued 11 - April 2025</p>
         <li><b>IBM: </b>Artificial Intelligence Fundamentals</li>
         <p className="">Issued 19 - March 2025</p>
         <li><b>Microsoft Certified:</b> Security, Compliance, and Identity Fundamentals</li>

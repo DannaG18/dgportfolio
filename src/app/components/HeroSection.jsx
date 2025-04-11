@@ -49,7 +49,7 @@ const HeroSection = () => {
             <Link
               href="
               
-              /CV Danna Alvarez - ATS.pdf"
+              /CV Danna Alvarez.pdf"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-purple-500 to-blue-700 hover:bg-slate-300 text-white mt-3"
               target="_blank"
               download
