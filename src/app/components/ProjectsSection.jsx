@@ -12,7 +12,7 @@ const projectsData = [
     image: "/images/projects/6.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/DannaG18/Service-Companies",
-    previewUrl: "/",
+    
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const projectsData = [
     image: "/images/projects/4.png",
     tag: ["All", "Java"],
     gitUrl: "https://github.com/DannaG18/Electrical-Sales-Management",
-    previewUrl: "/",
+    
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ const projectsData = [
     image: "/images/projects/2.png",
     tag: ["All", "Database"],
     gitUrl: "https://github.com/DannaG18/Logistics",
-    previewUrl: "/",
+    
   },
   {
     id: 6,
