@@ -66,7 +66,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            Hello, I'm Danna, and I love learning new things. I consider myself a very curious person, and whenever I see a problem, I 
+            Hello, I&apos;m Danna, and I love learning new things. I consider myself a very curious person, and whenever I see a problem, I 
             always want to find a solution. Every challenge I face is a new opportunity to learn, contribute, and build something 
             meaningful. This mindset has led me to become a software developer and a passionate technology enthusiast.
           </p>
