@@ -47,9 +47,7 @@ const HeroSection = () => {
               Hire Me
             </Link>
             <Link
-              href="
-              
-              /CV Danna Alvarez.pdf"
+              href="/Danna Alvarez's CV.pdf"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-purple-500 to-blue-700 hover:bg-slate-300 text-white mt-3"
               target="_blank"
               download
