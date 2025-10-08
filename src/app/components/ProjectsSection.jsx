@@ -7,6 +7,24 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
+    title: "Services Portfolio - Gabriela Ortiz",
+    description: "Development and branding of a portfolio of services for a Colombian fashion designer and influencer",
+    image: "/images/projects/gabriela-portfolio.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/DannaG18/go_website",
+    previewUrl: "https://gabriela-go.netlify.app/",
+  },
+    {
+    id: 2,
+    title: "Services Portfolio - Danna Alvarez",
+    description: "Development of a portfolio of services for a Colombian web developer",
+    image: "/images/projects/webfreelance.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/DannaG18/personalwebsite",
+    previewUrl: "https://dg18.netlify.app/",
+  },
+  {
+    id: 3,
     title: "Full-stack PrestService",
     description: "Manager and Client Interface",
     image: "/images/projects/6.png",
@@ -15,7 +33,7 @@ const projectsData = [
     
   },
   {
-    id: 2,
+    id: 4,
     title: "Electrical Sales Management",
     description: "Login, CRUD Operation, Invoice generator",
     image: "/images/projects/4.png",
@@ -24,7 +42,7 @@ const projectsData = [
     
   },
   {
-    id: 3,
+    id: 5,
     title: "Web Design",
     description: "Responsive web designs",
     image: "/images/projects/3.png",
@@ -33,7 +51,7 @@ const projectsData = [
     previewUrl: "https://dannag18.github.io/landingpagess/landingpages-main/index.html",
   },
   {
-    id: 4,
+    id: 6,
     title: "Pepita's Clothing",
     description: "Production cost calculator for product lines",
     image: "/images/projects/5.png",
@@ -42,7 +60,7 @@ const projectsData = [
     previewUrl: "https://confeccionesproyecto.netlify.app/Home",
   },
   {
-    id: 5,
+    id: 7,
     title: "Logistics Database",
     description: "SQL Operation",
     image: "/images/projects/2.png",
@@ -51,7 +69,7 @@ const projectsData = [
     
   },
   {
-    id: 6,
+    id: 8,
     title: "Burger Website",
     description: "Responsive website, dropdown menu",
     image: "/images/projects/1.png",
