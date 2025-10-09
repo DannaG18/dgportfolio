@@ -5,13 +5,11 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Heart } from "lucide-react";
+import Image from "next/image";
 import { certifications } from "../types/index.ts";
-
 import { ExternalLink } from "lucide-react";
 
 export const CertificationsSection = () => {
-
   return (
     <div className="min-h-screen via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
@@ -19,6 +17,7 @@ export const CertificationsSection = () => {
           <h1 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-14">
             Certifications
           </h1>
+
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}
@@ -43,14 +42,15 @@ export const CertificationsSection = () => {
                 >
                   <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 hover:border-slate-600 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 h-full">
                     <div className="relative aspect-[4/3] overflow-hidden">
-                      {item.type === 'image' ? (
+                      {item.type === "image" ? (
                         <div className="relative w-full h-full bg-slate-900">
-                          <img
+                          <Image
                             src={item.image}
                             alt={item.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            fill
+                            className="object-cover group-hover:scale-110 transition-transform duration-500"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
                           <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <ExternalLink size={16} className="text-slate-900" />
                           </div>

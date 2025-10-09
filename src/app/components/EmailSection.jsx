@@ -1,21 +1,21 @@
-"use client"
-import React, { useState, ChangeEvent, FormEvent } from "react";
+"use client";
+import React, { useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 
 const EmailSection = () => {
-  const FORM_ENDPOINT = 'https://formspree.io/f/mrblgvzn';
+  const FORM_ENDPOINT = "https://formspree.io/f/mrblgvzn";
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
-  const [status, setStatus] = useState('idle'); // valores posibles: 'idle', 'sending', 'success', 'error'
+  const [status, setStatus] = useState("idle");
   const [selected, setSelected] = useState(null);
 
   const handleChange = (e) => {
@@ -28,20 +28,19 @@ const EmailSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validación básica
     if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-      setStatus('error');
+      setStatus("error");
       return;
     }
 
-    setStatus('sending');
+    setStatus("sending");
 
     try {
       const res = await fetch(FORM_ENDPOINT, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -49,16 +48,16 @@ const EmailSection = () => {
       const result = await res.json();
 
       if (res.ok) {
-        setStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        setStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
         setSelected(null);
       } else {
-        setStatus('error');
-        console.error('Formspree Error:', result);
+        setStatus("error");
+        console.error("Formspree Error:", result);
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
-      setStatus('error');
+      console.error("Error submitting form:", error);
+      setStatus("error");
     }
   };
 
@@ -71,10 +70,10 @@ const EmailSection = () => {
 
       {/* Info */}
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
+        <h5 className="text-xl font-bold text-white my-2">Let&apos;s Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          I'm currently looking for new opportunities, my inbox is always open.
-          Whether you have a question or just want to say hi, I'll try my best
+          I&apos;m currently looking for new opportunities, my inbox is always open.
+          Whether you have a question or just want to say hi, I&apos;ll try my best
           to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
@@ -89,14 +88,10 @@ const EmailSection = () => {
 
       {/* Form */}
       <div>
-        {/* Mensaje de éxito */}
         {status === "success" && (
-          <p className="text-green-500 text-sm mb-2">
-            Email sent successfully!
-          </p>
+          <p className="text-green-500 text-sm mb-2">Email sent successfully!</p>
         )}
 
-        {/* Mensaje de error */}
         {status === "error" && (
           <p className="text-red-500 text-sm mb-2">
             Please fill all fields or try again.
@@ -157,7 +152,7 @@ const EmailSection = () => {
               onChange={handleChange}
               required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="I'm interested in hiring you"
+              placeholder="I&apos;m interested in hiring you"
             />
           </div>
 
@@ -175,7 +170,7 @@ const EmailSection = () => {
               onChange={handleChange}
               required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="I'm contacting you because..."
+              placeholder="I&apos;m contacting you because..."
             />
           </div>
 
@@ -188,7 +183,6 @@ const EmailSection = () => {
           </button>
         </form>
       </div>
-
     </section>
   );
 };
