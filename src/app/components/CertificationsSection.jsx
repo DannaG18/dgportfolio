@@ -40,7 +40,7 @@ export const CertificationsSection = () => {
                   rel="noopener noreferrer"
                   className="block group"
                 >
-                  <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 hover:border-slate-600 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 h-full">
+                  <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 hover:border-slate-600 transition-all duration-400 hover:shadow-2xl hover:shadow-blue-500/20 h-full">
                     <div className="relative aspect-[4/3] overflow-hidden">
                       {item.type === "image" ? (
                         <div className="relative w-full h-full bg-slate-900">
@@ -51,9 +51,12 @@ export const CertificationsSection = () => {
                             className="object-cover group-hover:scale-110 transition-transform duration-500"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
+                          {/* <a  href={item.credentialUrl}>
                           <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <ExternalLink size={16} className="text-slate-900" />
                           </div>
+
+                          </a> */}
                         </div>
                       ) : (
                         <div className="w-full h-full p-6 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-800 relative overflow-hidden">
@@ -63,24 +66,29 @@ export const CertificationsSection = () => {
                               {item.icon}
                             </div>
                           </div>
-                          <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <ExternalLink size={16} className="text-slate-900" />
-                          </div>
                         </div>
                       )}
                     </div>
 
                     <div className="p-5">
-                      <h3 className="text-white font-semibold text-lg mb-2 line-clamp-2 group-hover:text-blue-400 transition-colors duration-300">
+                      <h3 className="text-white font-bold text-lg mb-1 line-clamp- group-hover:text-blue-400 transition-colors duration-300">
                         {item.title}
                       </h3>
-                      <p className="text-slate-400 text-sm leading-relaxed line-clamp-3">
+                      <h3 className="text-white font-semibold text-m mb-2 line-clamp-2 group-hover:text-violet-400 transition-colors duration-300">
+                        {item.issuer}
+                      </h3>
+                      <p className="text-slate-300 text-sm leading-relaxed line-clamp-3 mb-2">
+                        {item.issueDate}
+                      </p>
+                      <p className="text-slate-400 text-sm leading-relaxed line-clamp-3 whitespace-pre-line">
                         {item.description}
                       </p>
+                      {/* <a  href={item.credentialUrl}>
                       <div className="mt-4 flex items-center text-blue-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <span>View Certificate</span>
                         <ExternalLink size={14} className="ml-1" />
                       </div>
+                      </a> */}
                     </div>
                   </div>
                 </a>
