@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: 3,
     title: "Full-stack PrestService",
-    description: "Manager and Client Interface",
+    description: "Full Stack platform with authentication and manager interface to manage the business logistics",
     image: "/images/projects/6.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/DannaG18/Service-Companies",
